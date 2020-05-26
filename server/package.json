@@ -4,14 +4,16 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "traveldiariesapp": "cd .. && cd traveldiariesapp && npm start",
+    "start": "nodemon index.js",
+    "dev": "concurrently \"npm run start\" \"npm run traveldiariesapp\"",
     "lint": "eslint src/"
   },
   "keywords": [],
   "author": "",
   "license": "",
   "dependencies": {
+    "concurrently": "^5.2.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

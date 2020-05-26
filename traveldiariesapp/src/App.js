@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ReactMapGL, { Marker, Popup } from 'react-map-gl';
+import ReactMapGL, { Marker, Popup, NavigationControl } from 'react-map-gl';
 import { listLogEntries } from './API';
 import LogEntryForm from './LogEntryForm';
 require('dotenv').config();
@@ -13,7 +13,9 @@ const App = () => {
     height: '100vh',
     latitude: 54.5,
     longitude: 15.3,
-    zoom: 2,
+    zoom: 2.5,
+    bearing: 0,
+    pitch: 0,
   });
 
   const getEntries = async () => {
@@ -36,13 +38,16 @@ const App = () => {
   return (
     <ReactMapGL
       {...viewport}
-      mapStyle="mapbox://styles/mapbox/streets-v9"
+      mapStyle="mapbox://styles/mapbox/navigation-preview-night-v4"
       mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
       onViewportChange={setViewport}
       onDblClick={showAddMarkerPopup}
     >
       {logEntries.map((entry) => (
         <React.Fragment key={entry._id}>
+          <div style={{ position: 'absolute', right: '5px', top: '5px' }}>
+            <NavigationControl />
+          </div>
           <Marker latitude={entry.latitude} longitude={entry.longitude}>
             <div
               onClick={() =>
