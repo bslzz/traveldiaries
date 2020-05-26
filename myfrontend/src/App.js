@@ -38,15 +38,21 @@ const App = () => {
   return (
     <ReactMapGL
       {...viewport}
-      mapStyle="mapbox://styles/mapbox/navigation-preview-night-v4"
+      mapStyle="mapbox://styles/mapbox/streets-v11"
       mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
       onViewportChange={setViewport}
       onDblClick={showAddMarkerPopup}
     >
       {logEntries.map((entry) => (
         <React.Fragment key={entry._id}>
-          <div style={{ position: 'absolute', right: '5px', top: '5px' }}>
-            <NavigationControl />
+          <div
+            style={{
+              position: 'absolute',
+              right: '5px',
+              top: '5px',
+            }}
+          >
+            <NavigationControl showCompass={false} />
           </div>
           <Marker latitude={entry.latitude} longitude={entry.longitude}>
             <div
