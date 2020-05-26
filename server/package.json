@@ -4,9 +4,9 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "traveldiariesapp": "cd .. && cd traveldiariesapp && npm start",
+    "myfrontend": "cd .. && cd myfrontend && npm start",
     "start": "nodemon index.js",
-    "dev": "concurrently \"npm run start\" \"npm run traveldiariesapp\"",
+    "dev": "concurrently \"npm run start\" \"npm run myfrontend\"",
     "lint": "eslint src/"
   },
   "keywords": [],
