@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import ReactMapGL, { Marker, Popup, NavigationControl } from 'react-map-gl';
+import ReactMapGL, {
+  Marker,
+  Popup,
+  NavigationControl,
+  GeolocateControl,
+} from 'react-map-gl';
 import { listLogEntries } from '../../API';
 import LogEntryForm from '../UserForm/LogEntryForm';
 
@@ -7,6 +12,7 @@ const MyMap = () => {
   const [logEntries, setLogEntries] = useState([]);
   const [showPopup, setShowPopup] = useState({});
   const [addEntryLocation, setAddEntryLocation] = useState(null);
+
   const [viewport, setViewport] = useState({
     width: '100%',
     height: '100vh',
@@ -51,6 +57,7 @@ const MyMap = () => {
               top: '5px',
             }}
           >
+            <GeolocateControl />
             <NavigationControl showCompass={false} />
           </div>
           <Marker latitude={entry.latitude} longitude={entry.longitude}>
@@ -104,6 +111,7 @@ const MyMap = () => {
                 </small>
                 {entry.image && <img src={entry.image} alt={entry.title} />}
               </div>
+              <button onClick={() => {}}>Delete</button>
             </Popup>
           ) : null}
         </React.Fragment>
