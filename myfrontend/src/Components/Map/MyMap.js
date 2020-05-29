@@ -99,17 +99,6 @@ const MyMap = () => {
 
       {logEntries.map((entry) => (
         <React.Fragment key={entry._id}>
-          <div
-            style={{
-              position: 'absolute',
-              right: '5px',
-              top: '5px',
-            }}
-          >
-            <GeolocateControl />
-            <NavigationControl showCompass={false} />
-          </div>
-
           <Marker latitude={entry.latitude} longitude={entry.longitude}>
             <div
               onClick={() =>
@@ -218,6 +207,16 @@ const MyMap = () => {
           </Popup>
         </>
       ) : null}
+      <div
+        style={{
+          position: 'absolute',
+          top: '5px',
+          right: '5px',
+        }}
+      >
+        <GeolocateControl />
+        <NavigationControl showCompass={false} />
+      </div>
     </ReactMapGL>
   );
 };

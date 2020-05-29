@@ -1,13 +1,12 @@
 const mongoose = require('mongoose');
-
-const { Schema } = mongoose;
+const { ObjectId } = mongoose.Schema.Types;
 
 const requiredNumber = {
   type: Number,
   required: true,
 };
 
-const logEntrySchema = new Schema(
+const logEntrySchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -29,6 +28,10 @@ const logEntrySchema = new Schema(
     visitDate: {
       required: true,
       type: Date,
+    },
+    postedBy: {
+      type: ObjectId,
+      ref: 'User',
     },
   },
   {
