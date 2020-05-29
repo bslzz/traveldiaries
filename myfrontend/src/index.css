@@ -69,7 +69,7 @@ body {
   margin: 1rem 0;
   cursor: pointer;
   transition: 0.2s ease-in-out;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .entry-form button:hover,
 .delete:hover {
