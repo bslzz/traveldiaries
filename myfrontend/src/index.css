@@ -51,7 +51,6 @@ body {
 .entry-form input,
 .entry-form textarea,
 .entry-form button {
-  font-size: 1rem;
   padding: 0.5rem 0;
   display: block;
   width: 100%;
@@ -63,23 +62,25 @@ body {
 .entry-form input,
 .entry-form textarea {
   margin: 0.5rem 0;
-}
-
-.entry-form input:focus,
-.entry-form textarea:focus {
-  border: 1px solid rgb(8, 93, 252);
+  font-size: 0.8rem;
 }
 
 .entry-form button {
   margin: 1rem 0;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+  font-size: 1.2rem;
 }
-.entry-form button:hover {
+.entry-form button:hover,
+.delete:hover {
   background-color: #03a9f4;
   color: #fff;
 }
 .delete {
   cursor: pointer;
   margin: 0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
 }

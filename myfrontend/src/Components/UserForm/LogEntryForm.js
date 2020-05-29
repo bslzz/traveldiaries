@@ -27,9 +27,9 @@ const LogEntryForm = ({ location, onClose }) => {
       <label htmlFor="title">Place Visited</label>
       <input name="title" required ref={register} autoComplete="off" />
       <label htmlFor="comments">Comments</label>
-      <textarea name="comments" rows={3} ref={register}></textarea>
+      <textarea name="comments" rows={2} ref={register}></textarea>
       <label htmlFor="description">Description</label>
-      <textarea name="description" rows={3} ref={register}></textarea>
+      <textarea name="description" rows={2} ref={register}></textarea>
       <label htmlFor="image">Image URL</label>
       <input name="image" ref={register} />
       <label htmlFor="visitDate">Visited Date</label>
