@@ -97,6 +97,17 @@ const MyMap = () => {
 
       <DeckGL {...viewport} layers={[searchResultLayer]} />
 
+      <div
+        style={{
+          position: 'absolute',
+          top: '5px',
+          right: '5px',
+        }}
+      >
+        <GeolocateControl />
+        <NavigationControl showCompass={false} />
+      </div>
+
       {logEntries.map((entry) => (
         <React.Fragment key={entry._id}>
           <Marker latitude={entry.latitude} longitude={entry.longitude}>
@@ -207,16 +218,6 @@ const MyMap = () => {
           </Popup>
         </>
       ) : null}
-      <div
-        style={{
-          position: 'absolute',
-          top: '5px',
-          right: '5px',
-        }}
-      >
-        <GeolocateControl />
-        <NavigationControl showCompass={false} />
-      </div>
     </ReactMapGL>
   );
 };
