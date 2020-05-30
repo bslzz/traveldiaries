@@ -114,7 +114,6 @@ const MyMap = () => {
             <div
               onClick={() =>
                 setShowPopup({
-                  ...showPopup,
                   [entry._id]: true,
                 })
               }
