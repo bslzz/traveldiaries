@@ -2,12 +2,13 @@ const express = require('express');
 const router = express.Router();
 const brcrypt = require('bcryptjs');
 const User = require('../models/UserSchema');
+const jwt = require('jsonwebtoken');
 
 router.post('/register', (req, res) => {
   const { name, email, password } = req.body;
 
   if (!name || !email || !password) {
-    res.status(401).json({ msg: 'Email and Password required' });
+    res.status(401).json({ msg: 'All fields must be filled' });
   }
   User.findOne({ email }).then((savedUser) => {
     if (savedUser) {
@@ -24,11 +25,11 @@ router.post('/register', (req, res) => {
       newUser
         .save()
         .then((user) => {
-          res.status(200).json({ msg: 'New user saved to DB' });
+          return res.status(200).json({ msg: 'New user saved to DB' });
           console.log(req.body);
         })
         .catch((err) => {
-          console.log({ msg: 'Error saving new user to DB' });
+          console.log({ msg: 'Error saving new user to DB :' + err });
         });
     });
   });
@@ -49,7 +50,11 @@ router.post('/login', (req, res) => {
       .compare(password, savedUser.password)
       .then((matched) => {
         if (matched) {
-          res.status(200).json('Matched');
+          const token = jwt.sign(
+            { _id: savedUser._id },
+            process.env.JWT_SECRET
+          );
+          res.json({ token });
         } else {
           res.status(422).json('Invalid email or password');
         }

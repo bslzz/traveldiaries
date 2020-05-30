@@ -7,7 +7,6 @@ const InitMongoose = require('../InitMongoose');
 require('dotenv').config();
 
 const middlewares = require('./middlewares');
-const logs = require('./api/logs');
 
 const app = express();
 InitMongoose(mongoose);
@@ -21,14 +20,8 @@ app.use(
 );
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.json({
-    message: 'Hello World!',
-  });
-});
-
 //api routes
-app.use('/api/logs', logs);
+app.use('/api/logs', require('./api/logs'));
 app.use(require('./api/userRoutes'));
 
 app.use(middlewares.notFound);
