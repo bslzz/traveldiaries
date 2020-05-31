@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { ObjectId } = mongoose.Schema.Types;
 
 const requiredNumber = {
   type: Number,
@@ -27,6 +28,10 @@ const logEntrySchema = new mongoose.Schema(
     visitDate: {
       required: true,
       type: Date,
+    },
+    postedBy: {
+      type: ObjectId,
+      ref: 'User',
     },
   },
   {
