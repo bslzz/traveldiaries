@@ -21,6 +21,10 @@ const Register = () => {
       ? alert('All fields are mandatory')
       : password !== confirm_password
       ? alert('Passwords dont match')
+      : !/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+          email
+        )
+      ? alert('Invalid email')
       : axios({
           url: '/register',
           method: 'POST',
