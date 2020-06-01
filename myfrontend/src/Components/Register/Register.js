@@ -34,10 +34,20 @@ const Register = () => {
           .then(() => {
             alert('Registration Successful');
             history.push('/login');
+            resetForm();
           })
           .catch((error) => {
             console.log('Error occured: ' + error);
           });
+  };
+
+  const resetForm = () => {
+    setUser({
+      name: '',
+      email: '',
+      password: '',
+      confirm_password: '',
+    });
   };
 
   return (

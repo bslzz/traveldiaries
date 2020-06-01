@@ -44,12 +44,12 @@ router.post('/login', (req, res) => {
 
   User.findOne({ email }).then((savedUser) => {
     if (!savedUser) {
-      res.status(422).json({ msg: 'No user found' });
+      return res.status(422).json({ msg: 'No user found' });
     }
     brcrypt
       .compare(password, savedUser.password)
-      .then((matched) => {
-        if (matched) {
+      .then((doMatch) => {
+        if (doMatch) {
           const token = jwt.sign(
             { _id: savedUser._id },
             process.env.JWT_SECRET
