@@ -1,5 +1,7 @@
 module.exports = (mongoose) => {
   mongoose.connect(process.env.DATABASE_URL, {
+    useCreateIndex: true,
+    useFindAndModify: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
