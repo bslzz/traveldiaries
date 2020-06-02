@@ -25,6 +25,7 @@ const Login = () => {
           },
         })
           .then((response) => {
+            localStorage.setItem('login', JSON.stringify(response));
             history.push('/mymap');
             const isAuthenticated = response.data.isAuthenticated;
             window.localStorage.setItem('isAuthenticated', isAuthenticated);

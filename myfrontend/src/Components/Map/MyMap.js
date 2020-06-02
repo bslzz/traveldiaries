@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
+import Logout from '../Logout/Logout';
+
 import ReactMapGL, {
   FlyToInterpolator,
   Marker,
@@ -217,6 +219,7 @@ const MyMap = () => {
           </Popup>
         </>
       ) : null}
+      <Logout />
     </ReactMapGL>
   );
 };

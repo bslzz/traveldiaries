@@ -19,9 +19,11 @@ const NavHeader = (props) => {
           <Link to="/" style={{ color: 'yellow' }} className="nav-link">
             Home
           </Link>
+
           <Link to="/login" style={{ color: 'yellow' }} className="nav-link">
             Login
           </Link>
+
           <Link to="/register" style={{ color: 'yellow' }} className="nav-link">
             Register
           </Link>
