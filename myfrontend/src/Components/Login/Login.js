@@ -36,7 +36,7 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={submitLogin}>
+    <form className="signForm" onSubmit={submitLogin}>
       <h3>Sign In </h3>
 
       <div className="form-group">

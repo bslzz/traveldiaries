@@ -56,7 +56,7 @@ const Register = () => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form className="signForm" onSubmit={submitHandler}>
       <h3>Sign Up</h3>
 
       <div className="form-group">

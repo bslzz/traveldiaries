@@ -4,16 +4,16 @@
   box-sizing: border-box;
 }
 
-form {
+.signForm {
   max-width: 50%;
   margin: 4rem auto;
   font-family: 'Poppins', sans-serif;
 }
-form h3 {
+.signForm h3 {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-form p {
+.signForm p {
   margin-top: 0.4rem;
 }
