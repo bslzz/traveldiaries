@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useHistory, Link } from 'react-router-dom';
-import './Register.css';
 
 const Register = () => {
   const history = useHistory();
@@ -110,7 +109,10 @@ const Register = () => {
         Sign Up
       </button>
       <p className="forgot-password text-right">
-        Already registered <Link to="/login">sign in?</Link>
+        Already registered{' '}
+        <Link style={{ color: 'yellow' }} to="/login">
+          sign in?
+        </Link>
       </p>
     </form>
   );

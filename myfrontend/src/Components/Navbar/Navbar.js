@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
-import './Navbar.css';
 
 const NavHeader = (props) => {
   if (props.location.pathname === '/mymap') {
@@ -10,20 +9,20 @@ const NavHeader = (props) => {
 
   return (
     <Navbar collapseOnSelect expand="lg">
-      <Link to="/" className="navbar-brand">
-        LOGO
+      <Link to="/" style={{ color: 'yellow' }} className="navbar-brand logo">
+        Traveldiaries
       </Link>
 
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto links">
-          <Link to="/" className="nav-link">
+          <Link to="/" style={{ color: 'yellow' }} className="nav-link">
             Home
           </Link>
-          <Link to="/login" className="nav-link">
+          <Link to="/login" style={{ color: 'yellow' }} className="nav-link">
             Login
           </Link>
-          <Link to="/register" className="nav-link">
+          <Link to="/register" style={{ color: 'yellow' }} className="nav-link">
             Register
           </Link>
         </Nav>

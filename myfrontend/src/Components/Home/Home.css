@@ -1,6 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
 
-.title h1 {
-  font-size: 4.5rem;
+.maintitle {
+  display: grid;
+  place-items: center;
+}
+
+.title h1,
+.title h2 {
   font-family: 'Squada One', cursive;
+  color: rgb(238, 238, 113);
+  text-align: center;
+}
+.title h1 {
+  font-size: 5rem;
+}
+.title h2 {
+  font-size: 3.5rem;
+}
+
+.mappic img {
+  padding-top: 1rem;
 }

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 body {
   margin: 0;
@@ -7,7 +8,17 @@ body {
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
   min-height: 100vh;
+  background-image: linear-gradient(
+      rgba(36, 55, 80, 0.8),
+      rgba(96, 85, 90, 0.9)
+    ),
+    url('https://images.unsplash.com/photo-1502920514313-52581002a659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+
+/* for map.js CSS */
 
 .marker {
   transform: translate(-50%, -100%);
@@ -84,4 +95,33 @@ body {
   border: none;
   border-radius: 5px;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+/* for login and registration form */
+
+.signForm {
+  max-width: 30%;
+  margin: 3rem auto;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+.signForm h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.signForm p {
+  margin-top: 0.3rem;
+}
+
+/* for Navbar */
+
+.links {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+.logo {
+  font-family: 'Fredoka One', cursive;
+  text-transform: uppercase;
 }

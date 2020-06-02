@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import axios from 'axios';
-import '../Register/Register.css';
 
 const Login = () => {
   const history = useHistory();
@@ -80,22 +79,12 @@ const Login = () => {
         Submit
       </button>
       <p className="forgot-password text-right">
-        Don't have an account? <Link to="/register">Register here</Link>
+        Don't have an account?
+        <Link style={{ color: 'yellow' }} to="/register">
+          Register here
+        </Link>
       </p>
     </form>
-
-    // <form onSubmit={submitLogin}>
-    //   <label htmlFor="">Email</label>
-    //   <input name="email" value={email} onChange={changeHandler} type="text" />
-    //   <label htmlFor="">Password</label>
-    //   <input
-    //     name="password"
-    //     value={password}
-    //     onChange={changeHandler}
-    //     type="password"
-    //   />
-    //   <button type="submit">Submit</button>
-    // </form>
   );
 };
 
