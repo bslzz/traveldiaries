@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
+import './Register.css';
 
 const Register = () => {
   const history = useHistory();
@@ -21,7 +22,7 @@ const Register = () => {
       ? alert('All fields are mandatory')
       : password !== confirm_password
       ? alert('Passwords dont match')
-      : !/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+      : !/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-z\-0-9]+\.)+[a-z]{2,3}))$/.test(
           email
         )
       ? alert('Invalid email')
@@ -56,25 +57,61 @@ const Register = () => {
 
   return (
     <form onSubmit={submitHandler}>
-      <label htmlFor="">Name</label>
-      <input name="name" value={name} onChange={changeHandler} type="text" />
-      <label htmlFor="">Email</label>
-      <input name="email" value={email} onChange={changeHandler} type="email" />
-      <label htmlFor="">Password</label>
-      <input
-        name="password"
-        value={password}
-        onChange={changeHandler}
-        type="password"
-      />
-      <label htmlFor="">Confirm Password</label>
-      <input
-        name="confirm_password"
-        value={confirm_password}
-        onChange={changeHandler}
-        type="password"
-      />
-      <button type="submit">Submit</button>
+      <h3>Sign Up</h3>
+
+      <div className="form-group">
+        <label>Name</label>
+        <input
+          type="text"
+          name="name"
+          value={name}
+          onChange={changeHandler}
+          className="form-control"
+          placeholder="Name"
+        />
+      </div>
+
+      <div className="form-group">
+        <label>Email address</label>
+        <input
+          type="email"
+          name="email"
+          value={email}
+          onChange={changeHandler}
+          className="form-control"
+          placeholder="Enter email"
+        />
+      </div>
+
+      <div className="form-group">
+        <label>Password</label>
+        <input
+          type="password"
+          name="password"
+          value={password}
+          onChange={changeHandler}
+          className="form-control"
+          placeholder="Enter password"
+        />
+      </div>
+      <div className="form-group">
+        <label>Confirm Password</label>
+        <input
+          type="password"
+          name="confirm_password"
+          value={confirm_password}
+          onChange={changeHandler}
+          className="form-control"
+          placeholder="Confirm password"
+        />
+      </div>
+
+      <button type="submit" className="btn btn-primary btn-block">
+        Sign Up
+      </button>
+      <p className="forgot-password text-right">
+        Already registered <Link to="/login">sign in?</Link>
+      </p>
     </form>
   );
 };

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+form {
+  max-width: 50%;
+  margin: 4rem auto;
+  font-family: 'Poppins', sans-serif;
+}
+form h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+form p {
+  margin-top: 0.4rem;
+}
