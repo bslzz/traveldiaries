@@ -109,9 +109,9 @@ const Register = () => {
         Sign Up
       </button>
       <p className="forgot-password text-right">
-        Already registered{' '}
+        Already registered?{' '}
         <Link style={{ color: 'yellow' }} to="/login">
-          sign in?
+          sign in
         </Link>
       </p>
     </form>

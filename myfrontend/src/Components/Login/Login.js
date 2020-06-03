@@ -80,7 +80,7 @@ const Login = () => {
         Submit
       </button>
       <p className="forgot-password text-right">
-        Don't have an account?
+        Don't have an account?{' '}
         <Link style={{ color: 'yellow' }} to="/register">
           Register here
         </Link>

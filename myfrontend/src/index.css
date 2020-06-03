@@ -6,7 +6,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
   min-height: 100vh;
   background-image: linear-gradient(
       rgba(36, 55, 80, 0.8),
@@ -104,10 +104,18 @@ body {
   margin: 3rem auto;
   font-family: 'Poppins', sans-serif;
   color: #fff;
+  letter-spacing: 1px;
 }
 .signForm h3 {
   text-align: center;
   margin-bottom: 1rem;
+}
+
+.signForm input {
+  box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.9);
+}
+.signForm input:hover {
+  box-shadow: 5px 2px 17px rgba(0, 0, 0, 0.7);
 }
 
 .signForm p {
@@ -120,8 +128,16 @@ body {
   font-size: 1.3rem;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
 }
 .logo {
   font-family: 'Fredoka One', cursive;
   text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 590px) {
+  .signForm p {
+    font-size: 12px;
+  }
 }

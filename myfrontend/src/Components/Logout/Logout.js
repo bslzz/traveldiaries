@@ -14,11 +14,13 @@ const Logout = () => {
         top: '5px',
         right: '5%',
         fontSize: '1.2rem',
+        fontWeight: '700',
+        color: '#0d47a1',
       }}
       onClick={removeItem}
       to="/"
     >
-      Logout
+      <i class="fas fa-sign-out-alt">Logout</i>
     </Link>
   );
 };
