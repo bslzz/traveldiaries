@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Logout from '../Logout/Logout';
-
 import ReactMapGL, {
   FlyToInterpolator,
   Marker,
@@ -63,7 +62,6 @@ const MyMap = () => {
   };
 
   const handleOnResult = (event) => {
-    console.log(event.result);
     setSearchResultsLayer(
       new GeoJsonLayer({
         id: 'search-result',
@@ -75,8 +73,6 @@ const MyMap = () => {
       })
     );
   };
-
-  console.log(viewport);
 
   return (
     <ReactMapGL

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useHistory, Link } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 
 const Register = () => {
   const history = useHistory();
@@ -38,83 +39,80 @@ const Register = () => {
           .then(() => {
             alert('Registration Successful');
             history.push('/login');
-            resetForm();
           })
           .catch((error) => {
             console.log('Error occured: ' + error);
           });
   };
 
-  const resetForm = () => {
-    setUser({
-      name: '',
-      email: '',
-      password: '',
-      confirm_password: '',
-    });
-  };
-
   return (
-    <form className="signForm" onSubmit={submitHandler}>
-      <h3>Sign Up</h3>
+    <>
+      <form className="signForm" onSubmit={submitHandler}>
+        <h3>Sign Up</h3>
 
-      <div className="form-group">
-        <label>Name</label>
-        <input
-          type="text"
-          name="name"
-          value={name}
-          onChange={changeHandler}
-          className="form-control"
-          placeholder="Name"
-        />
-      </div>
+        <div className="form-group">
+          <label>Name</label>
+          <input
+            type="text"
+            name="name"
+            value={name}
+            onChange={changeHandler}
+            className="form-control"
+            placeholder="Name"
+            autoComplete="off"
+          />
+        </div>
 
-      <div className="form-group">
-        <label>Email address</label>
-        <input
-          type="email"
-          name="email"
-          value={email}
-          onChange={changeHandler}
-          className="form-control"
-          placeholder="Enter email"
-        />
-      </div>
+        <div className="form-group">
+          <label>Email address</label>
+          <input
+            type="email"
+            name="email"
+            value={email}
+            onChange={changeHandler}
+            className="form-control"
+            placeholder="Enter email"
+            autoComplete="off"
+          />
+        </div>
 
-      <div className="form-group">
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={changeHandler}
-          className="form-control"
-          placeholder="Enter password"
-        />
-      </div>
-      <div className="form-group">
-        <label>Confirm Password</label>
-        <input
-          type="password"
-          name="confirm_password"
-          value={confirm_password}
-          onChange={changeHandler}
-          className="form-control"
-          placeholder="Confirm password"
-        />
-      </div>
+        <div className="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            value={password}
+            onChange={changeHandler}
+            className="form-control"
+            placeholder="Enter password"
+            autoComplete="off"
+          />
+        </div>
+        <div className="form-group">
+          <label>Confirm Password</label>
+          <input
+            type="password"
+            name="confirm_password"
+            value={confirm_password}
+            onChange={changeHandler}
+            className="form-control"
+            placeholder="Confirm password"
+            autoComplete="off"
+          />
+        </div>
 
-      <button type="submit" className="btn btn-primary btn-block">
-        Sign Up
-      </button>
-      <p className="forgot-password text-right">
-        Already registered?{' '}
-        <Link style={{ color: 'yellow' }} to="/login">
-          sign in
-        </Link>
-      </p>
-    </form>
+        <button type="submit" className="btn btn-primary btn-block">
+          Sign Up
+        </button>
+        <p className="forgot-password text-right">
+          Already registered?{' '}
+          <Link style={{ color: 'yellow' }} to="/login">
+            sign in
+          </Link>
+        </p>
+      </form>
+      <Footer />
+    </>
   );
 };
 

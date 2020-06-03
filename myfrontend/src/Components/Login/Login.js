@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import axios from 'axios';
+import Footer from '../Footer/Footer';
 
 const Login = () => {
   const history = useHistory();
@@ -36,56 +37,61 @@ const Login = () => {
   };
 
   return (
-    <form className="signForm" onSubmit={submitLogin}>
-      <h3>Sign In </h3>
+    <>
+      <form className="signForm" onSubmit={submitLogin}>
+        <h3>Sign In </h3>
 
-      <div className="form-group">
-        <label>Email address</label>
-        <input
-          type="email"
-          name="email"
-          value={email}
-          onChange={changeHandler}
-          className="form-control"
-          placeholder="Enter email"
-        />
-      </div>
-
-      <div className="form-group">
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={changeHandler}
-          className="form-control"
-          placeholder="Enter password"
-        />
-      </div>
-
-      <div className="form-group">
-        <div className="custom-control custom-checkbox">
+        <div className="form-group">
+          <label>Email address</label>
           <input
-            type="checkbox"
-            className="custom-control-input"
-            id="customCheck1"
+            type="email"
+            name="email"
+            value={email}
+            onChange={changeHandler}
+            className="form-control"
+            placeholder="Enter email"
+            autoComplete="off"
           />
-          <label className="custom-control-label" htmlFor="customCheck1">
-            Remember me
-          </label>
         </div>
-      </div>
 
-      <button type="submit" className="btn btn-primary btn-block">
-        Submit
-      </button>
-      <p className="forgot-password text-right">
-        Don't have an account?{' '}
-        <Link style={{ color: 'yellow' }} to="/register">
-          Register here
-        </Link>
-      </p>
-    </form>
+        <div className="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            value={password}
+            onChange={changeHandler}
+            className="form-control"
+            placeholder="Enter password"
+            autoComplete="off"
+          />
+        </div>
+
+        <div className="form-group">
+          <div className="custom-control custom-checkbox">
+            <input
+              type="checkbox"
+              className="custom-control-input"
+              id="customCheck1"
+            />
+            <label className="custom-control-label" htmlFor="customCheck1">
+              Remember me
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" className="btn btn-primary btn-block">
+          Submit
+        </button>
+        <p className="forgot-password text-right">
+          Don't have an account?{' '}
+          <Link style={{ color: 'yellow' }} to="/register">
+            Register here
+          </Link>
+        </p>
+      </form>
+      <Footer />
+    </>
   );
 };
 
