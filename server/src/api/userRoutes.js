@@ -86,4 +86,12 @@ router.post(
   }
 );
 
+router.get('/userdata', (req, res) => {
+  User.find()
+    .then((data) => res.json(data))
+    .catch((err) => {
+      msg: 'Error fetching DB users data', err;
+    });
+});
+
 module.exports = router;

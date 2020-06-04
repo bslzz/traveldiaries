@@ -20,7 +20,7 @@ const Logout = () => {
       onClick={removeItem}
       to="/"
     >
-      <i class="fas fa-sign-out-alt">Logout</i>
+      <i className="fas fa-sign-out-alt">Logout</i>
     </Link>
   );
 };

@@ -10,6 +10,7 @@ export async function createLogEntry(entry) {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
+      Authorization: 'Monkey ' + localStorage.getItem('jwt'),
     },
     body: JSON.stringify(entry),
   });

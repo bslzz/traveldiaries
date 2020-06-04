@@ -74,6 +74,9 @@ const MyMap = () => {
     );
   };
 
+  const deleteItem = (e) => {
+    console.log('clicked', e.target);
+  };
   return (
     <ReactMapGL
       ref={mapRef}
@@ -158,7 +161,9 @@ const MyMap = () => {
                 </small>
                 {entry.image && <img src={entry.image} alt={entry.title} />}
               </div>
-              <button className="delete">Delete</button>
+              <button className="delete" onClick={deleteItem}>
+                Delete
+              </button>
             </Popup>
           ) : null}
         </React.Fragment>
