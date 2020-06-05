@@ -59,7 +59,6 @@ const Register = () => {
             onChange={changeHandler}
             className="form-control"
             placeholder="Name"
-            autoComplete="off"
           />
         </div>
 
@@ -72,7 +71,6 @@ const Register = () => {
             onChange={changeHandler}
             className="form-control"
             placeholder="Enter email"
-            autoComplete="off"
           />
         </div>
 
@@ -85,7 +83,6 @@ const Register = () => {
             onChange={changeHandler}
             className="form-control"
             placeholder="Enter password"
-            autoComplete="off"
           />
         </div>
         <div className="form-group">
@@ -97,7 +94,6 @@ const Register = () => {
             onChange={changeHandler}
             className="form-control"
             placeholder="Confirm password"
-            autoComplete="off"
           />
         </div>
 

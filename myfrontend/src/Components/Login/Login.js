@@ -51,7 +51,6 @@ const Login = () => {
             onChange={changeHandler}
             className="form-control"
             placeholder="Enter email"
-            autoComplete="off"
           />
         </div>
 
@@ -64,7 +63,6 @@ const Login = () => {
             onChange={changeHandler}
             className="form-control"
             placeholder="Enter password"
-            autoComplete="off"
           />
         </div>
 
@@ -82,7 +80,7 @@ const Login = () => {
         </div>
 
         <button type="submit" className="btn btn-primary btn-block">
-          Submit
+          Login
         </button>
         <p className="forgot-password text-right">
           Don't have an account?{' '}
