@@ -12,8 +12,8 @@ const Logout = () => {
       style={{
         position: 'absolute',
         top: '5px',
-        right: '5%',
-        fontSize: '1.2rem',
+        right: '8%',
+        fontSize: '1.4rem',
         fontWeight: '700',
         color: '#0d47a1',
       }}

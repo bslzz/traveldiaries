@@ -11,18 +11,16 @@ require('dotenv').config();
 
 const App = () => {
   return (
-    <div className="homepage">
-      <Router>
-        <NavHeader />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
-          <Route path="/mymap" component={MyMap} />
-          <Route path="*" component={NotFound} />
-        </Switch>
-      </Router>
-    </div>
+    <Router>
+      <NavHeader />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
+        <Route path="/mymap" component={MyMap} />
+        <Route path="*" component={NotFound} />
+      </Switch>
+    </Router>
   );
 };
 

@@ -4,6 +4,7 @@
   display: grid;
   place-items: center;
   letter-spacing: 1px;
+  height: 87vh;
 }
 
 .title h1,
@@ -22,6 +23,18 @@
 
 .mappic img {
   padding-top: 1rem;
+}
+@media only screen and (max-width: 1199px) {
+  .mappic img {
+    height: 450px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .mappic img {
+    height: 330px;
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 600px) {

@@ -7,7 +7,6 @@ body {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
-  min-height: 100vh;
   background-image: linear-gradient(
       rgba(36, 55, 80, 0.8),
       rgba(76, 75, 80, 0.8)
@@ -101,12 +100,12 @@ body {
 /* for login and registration form */
 
 .signForm {
-  max-width: 30%;
+  width: 35%;
   margin: 3rem auto;
   font-family: 'Poppins', sans-serif;
   color: #fff;
   letter-spacing: 1px;
-  height: 100vh;
+  height: 73vh;
 }
 .signForm h3 {
   text-align: center;
@@ -138,8 +137,35 @@ body {
   letter-spacing: 1px;
 }
 
-@media only screen and (max-width: 590px) {
+@media only screen and (max-width: 1104px) {
   .signForm p {
     font-size: 12px;
+  }
+}
+@media only screen and (max-width: 925px) {
+  .popup img {
+    height: 55px;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 885px) {
+  .signForm {
+    min-width: 50%;
+  }
+  .signForm p {
+    font-size: 10px;
+  }
+  .form-group label {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 447px) {
+  .signForm p {
+    font-size: 7px;
+  }
+  .popup img {
+    height: 30px;
+    width: auto;
   }
 }
