@@ -168,4 +168,12 @@ body {
     height: 30px;
     width: auto;
   }
+
+  footer p {
+    font-size: 11px;
+  }
+
+  .links {
+    font-size: 0.9rem;
+  }
 }

@@ -4,7 +4,7 @@
   display: grid;
   place-items: center;
   letter-spacing: 1px;
-  height: 87vh;
+  min-height: 100vh;
 }
 
 .title h1,
