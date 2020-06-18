@@ -5,15 +5,15 @@ This project is an interactive travel log map app where the users can store thei
 
 Add .env file to myfrontend and add :
 
-REACT_APP_MAPBOX_TOKEN = (your mapbox token number)
+REACT_APP_MAPBOX_TOKEN = (your mapbox token number), 
 
 
 Add .env file to server and add :
 
-NODE_ENV=development
-PORT=5000
-DATABASE_URL= (your mongobd address)
-CORS_ORIGIN= http://localhost:3000
+NODE_ENV=development, 
+PORT=5000,  
+DATABASE_URL= (your mongobd address), 
+CORS_ORIGIN= http://localhost:3000, 
 
 
 
